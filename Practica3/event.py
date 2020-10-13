@@ -8,7 +8,7 @@ class Event:                   # Descendiente de la clase "object" (default)
     contiene tambien un constructor y los metodos que devuelven cada
     uno de los atributos individuales """
 
-    def __init__(self, name, time, target, source, distancia, ronda):
+    def __init__(self, name, time, target, source, distancia = 0, ronda = 0 , busqueda = 0 , resultado = 0):
         """ Construye una instancia con los atributos inicializados """
         self.name   = name
         self.time   = time
@@ -16,7 +16,8 @@ class Event:                   # Descendiente de la clase "object" (default)
         self.source = source
         self.distancia = distancia
         self.ronda = ronda
-
+        self.busqueda = busqueda
+        self.resultado = resultado
 
 
     def getName(self):
@@ -42,3 +43,11 @@ class Event:                   # Descendiente de la clase "object" (default)
     def getRound(self):
         """ Devuelve la ronda """
         return (self.ronda)
+
+    def getSearch(self):
+        """ Devuelve la el valor que estamos buscando """
+        return (self.busqueda)
+
+    def getResult(self):
+        """ Devuelve la lista con los nodos que contienen la variable a buscar """
+        return (self.resultado)
